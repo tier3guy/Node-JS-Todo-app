@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
+:root{
+  --dark : #DDFFBC;
+  --dark-secondary : #52734D;
+  --light : #91C788;
+  --lighter : #FEFFDE;
+
+  --font-main : 'Roboto';
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+ display: none;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--light);
+  transition: all 0.2s;
+}
+
+
+body{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+  overflow:hidden;
+}
+
+#header{
+  padding: 2em 0em 1em 0em;
+  width: 100%;
+  background: var(--dark-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--lighter);
+}
+
+#section , #todos{
+  width: 85%;
+  margin: 12px auto;
+}
+
+#section form{
+  width:100%;
+  display: flex;
+}
+
+.todo_field{
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 15px;
+  font-size: 1.2em;
+  color: var(--dark-secondary);
+  border-radius: 6px 0px 0px 6px;
+}
+
+
+.todo_field:focus{
+  border: 2px solid var(--light);
+  padding: 13px;
+}
+
+.submit__btn{
+  border-radius: 0px 6px 6px 0px;
+  width: 8em;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  background: var(--dark-secondary);
+  border: none;
+  outline: none;
+  color: var(--lighter);
+  transition: all 0.15s;
+}
+
+.submit__btn:hover{
+  border: 2px solid var(--dark-secondary);
+  color: var(--dark-secondary);
+  background: transparent;
+  padding: 6px 10px;
+}
+
+#task__header{
+  text-align: center;
+  color: var(--dark-secondary);
+}
+
+#todos{
+  height: 65vh;
+  overflow-y: scroll;
+  background: var(--dark);
+}
+
+.todo{
+  box-shadow: rgba(17, 17, 26, 0.5) 0px 0px 16px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.2em;
+  background: var(--dark-secondary);
+  color: var(--lighter);
+  padding: 15px;
+  border-radius: 6px;
+  transition: all 0.15s;
+  margin-bottom: 12px;
+}
+
+.todo:hover{
+  opacity: 0.9;
+}
+#delete__single__todo{
+  margin-left: 25px;
+  color: var(--lighter);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  transition: all 0.15s;
+}
+#delete__single__todo:hover{
+  color: red;
+}
+
+@media only screen and (min-width : 950px) {
+    
+  #section , #todos{
+    width: 75%;
+  }
+}

@@ -1,0 +1,8 @@
+<% for(var i = todoing__data.length - 1; i >= 0; i--){ %>
+<div class = "todo">
+  <%= todoing__data[i].todo %>
+  <div class="updates__btn">
+    <button id = "delete__single__todo"><a class="delete__btn" data-id = <%= todoing__data[i]._id %> ><i class="fas fa-trash-alt"></i></a></button>
+  </div>
+</div>
+<% } %>
