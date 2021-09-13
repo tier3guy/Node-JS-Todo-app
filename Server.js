@@ -25,7 +25,7 @@ app.use('/',require('./server/routes/router'));
 
 app.get('/' , (req,res) => {
 
-  axios.get('http://localhost:3000/api/todos')
+  axios.get('/api/todos')
   .then(response => {
     res.render('index' , {
       todoing__data : response.data
